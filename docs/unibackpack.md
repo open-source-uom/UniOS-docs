@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="../img/unibackpack.png" alt="UniBackpack logo" width="200">
+</p>
+
 # UniBackpack
 
 UniBackpack is a lightweight C++ Qt application designed to automate the installation of essential software and development tools for university students. By selecting the target University and Department, the application automatically detects the underlying Linux distribution's package manager (`apt` or `pacman`) and installs the required toolchain.
