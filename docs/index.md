@@ -1,28 +1,31 @@
-<img src="img/favicon.ico" alt="UniOS Logo" width="200">
+<p align="center">
+  <img src="img/favicon.ico" alt="UniOS Logo" width="200">
+</p>
+
 # Welcome to the UniOS docs
 
-### What are we doing here? 
-Our goal is to provide the Greek academic community (students for now) with a Linux distribution that will be tailored to their needs. That's why we made UniOS a free and open source Kubuntu respin and many apps to along with it. In those docs you will find the technical explanation for our project, we will explain the architecture and the building pipeline of the OS and of the apps that go along with it. If you want something a bit more light hearted that could possibly go md on a press realease or to explain to a non technical friend or colleague you can visit our [webpage](https://open-source-uom.github.io/UniOS-landing-page/)
+### What are we doing here?  
+Our goal is to provide the Greek academic community (students for now) with a Linux distribution that will be tailored to their needs. That's why we made UniOS a free and open source Kubuntu respin and many apps to go along with it. 
+
+In those docs you will find the technical explanation for our project; we will explain the architecture and the building pipeline of the OS and of the apps that go along with it. If you want something a bit more light-hearted that could possibly go on a press release or to explain to a non-technical friend or colleague, you can visit our <a href="https://open-source-uom.github.io/UniOS-landing-page/" target="_blank">webpage</a>.
 
 ### Current list of projects
-As of now we developed the following projects: 
+As of now we have developed the following projects:  
 
-- [UniOS](https://github.com/open-source-uom/UniOS) (It should be noted that this is the initial building script and it is of not much use after the first build).
+* <a href="https://github.com/open-source-uom/UniOS" target="_blank">UniOS</a> – It should be noted that this is the initial building script and it is of not much use after the first build.
+* <a href="https://github.com/open-source-uom/UniBackpack" target="_blank">UniBackpack</a> – Our downloader for the software used by the departments of the Greek universities to teach each subject.
+* <a href="https://github.com/open-source-uom/UniDesk" target="_blank">UniDesk</a> – Our welcomer and helper app that runs on startup to greet the user and make them engage with our community.
+* <a href="https://github.com/open-source-uom/UniMate" target="_blank">UniMate</a> – Our web app that serves as a bulk downloader for general use Linux apps.
+* <a href="https://open-source-uom.github.io/UniOS-landing-page/" target="_blank">Our Webpage</a> – This is our landing page that does a less technical introduction for our ecosystem.  
+* <a href="https://open-source-uom.github.io/UniOS-docs/uniosdocs" target="_blank">The webpage that you are currnetly on</a> – This is our documentation page that should be considered part of the workflow if you want to write for us, which we dearly suggest.
 
-- [UniBackpack](github.com/open-source-uom/UniBackpack) Our downloader for the software used by the department's of the Greek universities to teach each subject.
-
-- [UniDesk](github.com/open-source-uom/UniDesk) Our welcomer and helper app that runs on start up to greet the user and make him engage with our community.
-
-- [UniMate](github.com/open-source-uom/UniMate) Our web app that serves as a bulk downloader for general use Linux apps.
-
-- [Our webpage](https://open-source-uom.github.io/UniOS-landing-page/) This is our webpage that does a less technical introduction for our ecosystem. 
 
 ### Current list of packages available
-The package that is currently maintained on our PPA is: 
+The package that is currently maintained on our PPA is:  
 
-- [unios-desktop-settings](https://github.com/open-source-uom/unios-desktop-settings) 
+* <a href="https://github.com/open-source-uom/unios-desktop-settings" target="_blank">unios-desktop-settings</a>  
 
-### Current list of PPA's 
-Our PPA that you can add on your (debian/ubuntu based) system right now and get the UniOS experience is 
+### Current list of PPA's  
+Our PPA that you can add on your (Debian/Ubuntu-based) system right now and get the UniOS experience is:  
 
-- [unios-core-stable](https://launchpad.net/~unios-team/+archive/ubuntu/ppa)
+* <a href="https://launchpad.net/~unios-team/+archive/ubuntu/ppa" target="_blank">unios-core-stable</a>
