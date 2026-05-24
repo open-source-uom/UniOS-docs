@@ -2,7 +2,9 @@ site_name: UniOS Docs
 
 nav: 
  - Home: index.md
+ - General Dev Workflow: generalworkflow.md
  - UniBackpack: unibackpack.md
+ - UniDesk: unidesk.md
 
 theme: 
   name: material

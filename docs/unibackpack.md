@@ -22,7 +22,7 @@ Before building UniBackpack, ensure that the following dependencies are installe
 ```bash
 sudo pacman -S base-devel cmake qt6-base qt6-tools polkit
 ```
-
+UniOS Logo
 **For Debian / Ubuntu / Linux Mint:**
 ```bash
 sudo apt install build-essential cmake qt6-base-dev qt6-tools-dev-tools policykit-1
