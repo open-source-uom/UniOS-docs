@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../generalworkflow/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../unidesk/">
+        <link rel="next" href="../unibackpack/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>UniBackpack - UniOS Docs</title>
+        <title>General Dev Workflow - UniOS Docs</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#unibackpack" class="md-skip">
+        <a href="#general-workflow-for-developing-unios-or-unios-apps" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              UniBackpack
+              General Dev Workflow
             
           </span>
         </div>
@@ -264,33 +264,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../generalworkflow/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    General Dev Workflow
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -310,7 +283,7 @@
   <span class="md-ellipsis">
     
   
-    UniBackpack
+    General Dev Workflow
   
 
     
@@ -328,7 +301,7 @@
   <span class="md-ellipsis">
     
   
-    UniBackpack
+    General Dev Workflow
   
 
     
@@ -354,38 +327,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#unios-apps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Prerequisites">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installing-dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Installing Dependencies
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Project Structure
+        UniOS Apps
       
     </span>
   </a>
@@ -393,10 +338,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#contributors" class="md-nav__link">
+  <a href="#unios" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Contributors
+        UniOS
       
     </span>
   </a>
@@ -407,6 +352,33 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unibackpack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UniBackpack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -465,38 +437,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#unios-apps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Prerequisites">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installing-dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Installing Dependencies
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Project Structure
+        UniOS Apps
       
     </span>
   </a>
@@ -504,10 +448,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#contributors" class="md-nav__link">
+  <a href="#unios" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Contributors
+        UniOS
       
     </span>
   </a>
@@ -531,41 +475,33 @@
 
 
 
-<p align="center">
-  <img src="../img/unibackpack.png" alt="UniBackpack logo" width="200">
+<h1 id="general-workflow-for-developing-unios-or-unios-apps">General Workflow for developing UniOS or UniOS apps</h1>
+<p>This document explains the general workflow of how to develop for UniOS and the apps that support it. Generally we will touch the subject of developing the apps first because UniOS currently undergoes general development. </p>
+<h2 id="unios-apps">UniOS Apps</h2>
+<p>In general all development and especially apps are developed via issues, the following diagram explains the workflow visually: </p>
+<p allign="center">
+    <img src="../img/generalWorkflow.png" alt="General Worfklofw diagram">
 </p>
 
-<h1 id="unibackpack">UniBackpack</h1>
-<p>UniBackpack is a lightweight C++ Qt application designed to automate the installation of essential software and development tools for university students. By selecting the target University and Department, the application automatically detects the underlying Linux distribution's package manager (<code>apt</code> or <code>pacman</code>) and installs the required toolchain.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>Before building UniBackpack, ensure that the following dependencies are installed on your system:</p>
+<p>Namely the steps can be reduced too: 
+- Issue is being created by the UniOS team or the individual </p>
 <ul>
-<li>A C++17 compatible compiler (<code>gcc</code> or <code>clang</code>)</li>
-<li>CMake (version 3.10 or higher)</li>
-<li>Qt6 Development Libraries</li>
-<li>Polkit (<code>pkexec</code>) for granting installation privileges</li>
+<li>
+<p>An individual or a team member creates a new branch and tries to solve the issue</p>
+</li>
+<li>
+<p>After submitting the pull request and after the reviews and adjustments the PR is accepted</p>
+</li>
+<li>
+<p>If the change is significant (marked by the significant tag in the issue page) the change should be documented in UniDocs and pushed through a PR. </p>
+</li>
+<li>
+<p>If the change is bumping a version number, then a release should be created and a changelog should be generated. </p>
+</li>
 </ul>
-<h3 id="installing-dependencies">Installing Dependencies</h3>
-<p><strong>For Arch Linux / Manjaro / EndeavourOS:</strong></p>
-<pre><code class="language-bash">sudo pacman -S base-devel cmake qt6-base qt6-tools polkit
-</code></pre>
-<p>UniOS Logo
-<strong>For Debian / Ubuntu / Linux Mint:</strong></p>
-<pre><code class="language-bash">sudo apt install build-essential cmake qt6-base-dev qt6-tools-dev-tools policykit-1
-</code></pre>
-<h2 id="project-structure">Project Structure</h2>
-<ul>
-<li><code>src/</code> - C++ source files (<code>.cpp</code>)</li>
-<li><code>include/</code> - C++ header files (<code>.hpp</code>)</li>
-<li><code>ui/</code> - Qt Designer forms (<code>.ui</code>)</li>
-<li><code>resources/lists/</code> - Configuration files containing the software lists tailored for each academic department.</li>
-<li><code>resources/icons/</code> - Icons for each academic department.</li>
-</ul>
-<h2 id="contributors">Contributors</h2>
-<p><a href="https://github.com/open-source-uom/UniBackpack/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=open-source-uom/UniBackpack" />
-</a></p>
-<hr />
+<h2 id="unios">UniOS</h2>
+<p>UniOS is developed a bit differently, because packages are a bit more weird you do need to have access to the PPA team, which for now only two people have for safety reasons. </p>
+<p>Generally the package development cycle is the same with the apps development cycle, but when the PR passes and the build is completed the maintainers of the PPA will use <code>dput</code> to add the <code>.deb</code> package to Canonical's servers.</p>
 
 
 
