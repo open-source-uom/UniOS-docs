@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="img/favicon.ico" alt="UniDesk logo" width="200">
+  <img src="../img/favicon.ico" alt="UniDesk logo" width="200">
 </p>
 
 # UniDesk
