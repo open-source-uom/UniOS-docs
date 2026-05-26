@@ -24,6 +24,8 @@ As of now we have developed the following projects:
 The package that is currently maintained on our PPA is:  
 
 * <a href="https://github.com/open-source-uom/unios-desktop-settings" target="_blank">unios-desktop-settings</a>  
+* <a href="https://github.com/open-source-uom/UniDesk" target="_blank">python3-unidesk</a>  
+* <a href="https://github.com/open-source-uom/UniBackpack" target="_blank">unibackpack</a>  
 
 ### Current list of PPA's  
 Our PPA that you can add on your (Debian/Ubuntu-based) system right now and get the UniOS experience is:  
