@@ -35,12 +35,3 @@ sudo apt install build-essential cmake qt6-base-dev qt6-tools-dev-tools policyki
 * `ui/` - Qt Designer forms (`.ui`)
 * `resources/lists/` - Configuration files containing the software lists tailored for each academic department.
 * `resources/icons/` - Icons for each academic department.
-
-
-## Contributors
-
-<a href="https://github.com/open-source-uom/UniBackpack/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=open-source-uom/UniBackpack" />
-</a>
-
----

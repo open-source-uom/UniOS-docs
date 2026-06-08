@@ -10,7 +10,8 @@ In general all development and especially apps are developed via issues, the fol
     <img src="../img/generalWorkflow.png" alt="General Worfklofw diagram">
 </p>
 
-Namely the steps can be reduced too: 
+Namely the steps can be reduced to:
+
 - Issue is being created by the UniOS team or the individual 
 
 - An individual or a team member creates a new branch and tries to solve the issue
@@ -24,4 +25,4 @@ Namely the steps can be reduced too:
 ## UniOS 
 UniOS is developed a bit differently, because packages are a bit more weird you do need to have access to the PPA team, which for now only two people have for safety reasons. 
 
-Generally the package development cycle is the same with the apps development cycle, but when the PR passes and the build is completed the maintainers of the PPA will use `dput` to add the `.deb` package to Canonical's servers.
+Generally the package development cycle is the same with the apps development cycle, but when the PR passes and the build is completed the maintainers of the PPA will use `dput` to add the `.source` package to Canonical's servers.

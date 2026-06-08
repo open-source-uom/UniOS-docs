@@ -36,9 +36,3 @@ src/unidesk/
 ```
 
 To update any page content just open `pages.py` and edit the body text for that page. To add a new contributor open `credits.py`.
-
-## Contributing
-
-Contributions are welcome. If you want to improve the UI, fix a typo, or add a new page, open a pull request on GitHub. If you find a bug, open an issue. There is no contribution too small.
-
-Built by Open Source UoM 2026
