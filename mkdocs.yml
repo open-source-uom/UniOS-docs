@@ -1,8 +1,8 @@
 site_name: UniOS Docs
+site_url: https://docs.unios-project.eu
 
 nav: 
  - Home: index.md
- - site_url: https://docs.unios-project.eu
  - General Dev Workflow: generalworkflow.md
  - UniBackpack: unibackpack.md
  - UniDesk: unidesk.md
