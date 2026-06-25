@@ -16,8 +16,8 @@ As of now we have developed the following projects:
 * <a href="https://github.com/open-source-uom/UniBackpack" target="_blank">UniBackpack</a> – Our downloader for the software used by the departments of the Greek universities to teach each subject.
 * <a href="https://github.com/open-source-uom/UniDesk" target="_blank">UniDesk</a> – Our welcomer and helper app that runs on startup to greet the user and make them engage with our community.
 * <a href="https://github.com/open-source-uom/UniMate" target="_blank">UniMate</a> – Our web app that serves as a bulk downloader for general use Linux apps.
-* <a href="https://open-source-uom.github.io/UniOS-landing-page/" target="_blank">Our Webpage</a> – This is our landing page that does a less technical introduction for our ecosystem.  
-* <a href="https://open-source-uom.github.io/UniOS-docs/" target="_blank">The webpage that you are currently on</a> – This is our documentation page that should be considered part of the workflow if you want to write for us, which we dearly suggest.
+* <a href="https://unios-project.eu" target="_blank">Our Webpage</a> – This is our landing page that does a less technical introduction for our ecosystem.  
+* <a href="https://docs.unios-project.eu" target="_blank">The webpage that you are currently on</a> – This is our documentation page that should be considered part of the workflow if you want to write for us, which we dearly suggest.
 
 
 ### Current list of packages available
