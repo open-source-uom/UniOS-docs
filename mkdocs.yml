@@ -5,6 +5,7 @@ nav:
  - General Dev Workflow: generalworkflow.md
  - UniBackpack: unibackpack.md
  - UniDesk: unidesk.md
+ - UniNews: uninews.md
 
 theme: 
   name: material
