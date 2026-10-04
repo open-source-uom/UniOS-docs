@@ -14,14 +14,14 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../unibackpack/">
+        <link rel="next" href="../addingdocs/">
       
       
         
       
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -329,6 +329,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#building-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building process
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#unios-apps" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -336,6 +347,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="UniOS Apps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-get-help-throughout-the-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to get help throughout the process
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -354,6 +382,33 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../addingdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -466,6 +521,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#building-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building process
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#unios-apps" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -473,6 +539,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="UniOS Apps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-get-help-throughout-the-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to get help throughout the process
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -505,7 +588,9 @@
 
 
 <h1 id="general-workflow-for-developing-unios-or-unios-apps">General Workflow for developing UniOS or UniOS apps</h1>
-<p>This document explains the general workflow of how to develop for UniOS and the apps that support it. Generally we will touch the subject of developing the apps first because UniOS currently undergoes general development. </p>
+<p>This document explains the general workflow of how to develop for UniOS and the apps that support it. </p>
+<h2 id="building-process">Building process</h2>
+<p>Because we want to build process to be as accessible to the core team without having to switch OS and developer's computer agnostic to avoid silly bugs we do maintain a server that builds the ISO and the packages, that server is <code>build.unios-project.eu</code>, it is accessible only through the core team members listed on our webpage, you can of course ask a maintainer to perform the build for you but in general the maintainers already know that if an issue is flagged with the <code>build.unios-project.eu</code> label it is to be built using the server. There is a dedicated article that details to building process on the server.</p>
 <h2 id="unios-apps">UniOS Apps</h2>
 <p>In general all development and especially apps are developed via issues, the following diagram explains the workflow visually: </p>
 <p allign="center">
@@ -530,9 +615,15 @@
 <p>If the change is bumping a version number, then a release should be created and a changelog should be generated. </p>
 </li>
 </ul>
+<h3 id="how-to-get-help-throughout-the-process">How to get help throughout the process</h3>
+<p>If you need to ask questions or need human support during the development process there are serveral ways to get it. Namely: 
+- You can of course ask for help in the PR and a maintainer will get back to you as soon as possible. 
+- You can hop on the engineering call every Thursday with the core team of the project. (Hours vary every Thursday because we are students)
+- You can come and ask us in the office B-102 in University of Macedonia every Sunday. </p>
 <h2 id="unios">UniOS</h2>
-<p>UniOS is developed a bit differently, because packages are a bit more weird you do need to have access to the PPA team, which for now only two people have for safety reasons. </p>
-<p>Generally the package development cycle is the same with the apps development cycle, but when the PR passes and the build is completed the maintainers of the PPA will use <code>dput</code> to add the <code>.source</code> package to Canonical's servers.</p>
+<p>Since UniOS is an Arch derivative it should be regulary updated, once every month we trigger an update and the ISO is being updated with the newest Arch packages and the newest UniOS packages. This date is set to be the 16th of every month. </p>
+<p>We use the same server aforementioned to build the ISO, but this job is automated so there is no need for a maintainer or a contributor to do anything</p>
+<p>In general we don't trigger "emergency" updates for bugs that are encoutered but there is a way to patch a problem in the middle of the updates interval. You can ass your fix as a dependency in the <code>unios-applications-meta</code> package and it will be pushed as an upgrade.</p>
 
 
 
@@ -585,7 +676,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
