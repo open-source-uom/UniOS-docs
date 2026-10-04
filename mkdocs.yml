@@ -4,6 +4,7 @@ site_url: https://docs.unios-project.eu
 nav: 
  - Home: index.md
  - General Dev Workflow: generalworkflow.md
+ - Adding docs: addingdocs.md
  - UniBackpack: unibackpack.md
  - UniDesk: unidesk.md
  - UniNews: uninews.md
