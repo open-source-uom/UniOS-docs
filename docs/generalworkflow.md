@@ -30,6 +30,8 @@ If you need to ask questions or need human support during the development proces
 
 - You can of course ask for help in the PR and a maintainer will get back to you as soon as possible. 
 
+- You can ping the core team in Discord and ask them the relevant question
+
 - You can hop on the engineering call every Thursday with the core team of the project. (Hours vary every Thursday because we are students)
 
 - You can come and ask us in the office B-102 in University of Macedonia every Sunday. 
