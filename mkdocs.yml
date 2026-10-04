@@ -1,19 +1,20 @@
 site_name: UniOS Docs
 site_url: https://docs.unios-project.eu
 
-nav: 
+nav:
  - Home: index.md
  - General Dev Workflow: generalworkflow.md
  - Adding docs: addingdocs.md
+ - Our build server: build.unios-project.eu.md
  - UniBackpack: unibackpack.md
  - UniDesk: unidesk.md
  - UniNews: uninews.md
 
-theme: 
+theme:
   name: material
   favicon: img/favicon.ico
   logo: img/favicon.ico
-  
+
   palette:
       - media: "(prefers-color-scheme)"
         toggle:
