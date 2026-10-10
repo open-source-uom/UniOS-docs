@@ -9,6 +9,7 @@ nav:
  - UniBackpack: unibackpack.md
  - UniDesk: unidesk.md
  - UniNews: uninews.md
+ - UniOS-landind-page: UniOS-landing-page.md
 
 theme:
   name: material
