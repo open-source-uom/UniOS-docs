@@ -10,6 +10,7 @@ nav:
  - UniDesk: unidesk.md
  - UniNews: uninews.md
  - UniOS-landind-page: UniOS-landing-page.md
+ - unios-desktop-settings: unios-desktop-settings.md
 
 theme:
   name: material
