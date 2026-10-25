@@ -1,0 +1,886 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.unios-project.eu/unios-update/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>UniOS-Update - UniOS Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unios-update" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="UniOS Docs" class="md-header__button md-logo" aria-label="UniOS Docs" data-md-component="logo">
+      
+  <img src="../img/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UniOS Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UniOS-Update
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="purple" data-md-color-accent="purple"  aria-label="Switch to system preference`"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference`" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="UniOS Docs" class="md-nav__button md-logo" aria-label="UniOS Docs" data-md-component="logo">
+      
+  <img src="../img/favicon.ico" alt="logo">
+
+    </a>
+    UniOS Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generalworkflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General Dev Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../addingdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build.unios-project.eu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Our build server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unibackpack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UniBackpack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidesk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UniDesk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uninews/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UniNews
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UniOS-landing-page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UniOS-landind-page
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unios-desktop-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    unios-desktop-settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-systray-applet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The systray applet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-automated-update-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The automated update checks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screenshots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screenshots
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unios-update_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        unios-update
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unios-update-configuration-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        unios-update configuration file
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-tricks-and-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips &amp; tricks and troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips &amp; tricks and troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modify-the-check-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modify the check cycle
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contributing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        License
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="unios-update">UniOS-Update</h1>
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+<li><a href="#description">Description</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#tips--tricks-and-troubleshooting">Tips &amp; tricks and troubleshooting</a></li>
+<li><a href="#reproduce-the-pre-compiled-tray-binary-from-source">Reproduce the pre-compiled tray binary from source</a></li>
+<li><a href="#contributing">Contributing</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+<h2 id="description">Description</h2>
+<p>An interactive update notifier &amp; applier for UniOS that assists you with important pre / post update tasks. 
+Includes a systray applet for an easy integration with any desktop / graphical environment.
+You will see a lot of referals to Arch Linux because UniOS is a respin. This notifier is the one Arch Linux uses with stylistic changes to fit our operating system.</p>
+<p>UniOS-Update is designed to follow usual system maintenance steps, as <a href="https://wiki.archlinux.org/title/System_maintenance">described in the Arch Wiki</a>.</p>
+<p>Features:</p>
+<ul>
+<li>Automatic check and listing of available updates.</li>
+<li>Check for recent Arch Linux news (and offers to display them if there are).</li>
+<li>Check for orphan packages (and offers to remove them if there are).</li>
+<li>Check for old &amp; uninstalled packages in cache (and offers to remove them if there are).</li>
+<li>Check for pacnew &amp; pacsave files (and offers to process them if there are).</li>
+<li>Check for pending kernel update requiring a reboot (and offers to do so if there's one).</li>
+<li>Check for services requiring a post upgrade restart (and offers to do so if there are).</li>
+<li>Support for <code>sudo</code>, <code>sudo-rs</code>, <code>doas</code> &amp; <code>run0</code>.</li>
+<li>Extensive CLI.</li>
+</ul>
+<p>Optional support for:</p>
+<ul>
+<li>Flatpak packages (via <code>flatpak</code>).</li>
+<li>Desktop notifications (via <code>libnotify</code>).</li>
+<li>Check for ALHP build queue or outdated mirrors (via <code>alhp-utils</code>).</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<h3 id="from-source">From Source</h3>
+<p>Install required runtime dependencies:</p>
+<pre><code class="language-bash">sudo pacman -S --needed bash systemd pacman pacman-contrib archlinux-contrib glibc libgcc curl fakeroot htmlq diffutils hicolor-icon-theme glib2 xdg-utils util-linux
+</code></pre>
+<p>Additional optional dependencies you might want or need:</p>
+<ul>
+<li><a href="https://archlinux.org/packages/extra/x86_64/flatpak/">flatpak</a>: Flatpak Packages support</li>
+<li><a href="https://archlinux.org/packages/extra/x86_64/libnotify/">libnotify</a>: Desktop notifications support on new available updates (see <a href="https://wiki.archlinux.org/title/Desktop_notifications">https://wiki.archlinux.org/title/Desktop_notifications</a>)</li>
+<li><a href="https://aur.archlinux.org/packages/alhp-utils">alhp-utils</a>: Check for ALHP build queue or outdated mirrors</li>
+<li><a href="https://archlinux.org/packages/extra/x86_64/vim/">vim</a>: Default diff program for pacdiff</li>
+<li><a href="https://archlinux.org/packages/extra/x86_64/neovim/">neovim</a>: Default diff program for pacdiff if <code>EDITOR=nvim</code></li>
+<li><a href="https://archlinux.org/packages/core/x86_64/sudo/">sudo</a>: Privilege elevation</li>
+<li><a href="https://archlinux.org/packages/extra/x86_64/sudo-rs/">sudo-rs</a>: Privilege elevation</li>
+<li><a href="https://archlinux.org/packages/extra/x86_64/opendoas/">opendoas</a>: Privilege elevation</li>
+</ul>
+<p>Install required build and test dependencies:</p>
+<pre><code class="language-bash">sudo pacman -S --asdeps make scdoc bats cargo pkgconf
+</code></pre>
+<p>Download the archive of the <a href="https://github.com/Antiz96/arch-update/releases/latest">latest stable release</a> and extract it (alternatively, you can clone this repository with <code>git</code>).</p>
+<p>To build and install <code>unios-update</code>, go into the extracted / cloned directory and run the following commands:</p>
+<pre><code class="language-bash">make # You can optionally pass the `WITH_TRAY=false` argument to not build the systray applet
+make test
+sudo make install # You can optionally pass the `WITH_TRAY=false` argument to not install the systray applet
+</code></pre>
+<p>Once the installation is complete, you may optionally clean up the directory of files generated during installation by running the following command:</p>
+<pre><code class="language-bash">make clean
+</code></pre>
+<p>To uninstall <code>unios-update</code>, go into the extracted / cloned directory and run the following command:</p>
+<pre><code class="language-bash">sudo make uninstall
+</code></pre>
+<h2 id="usage">Usage</h2>
+<p>For desktop machines, the usage consist of starting <a href="#the-systray-applet">the systray applet</a> and enabling <a href="#the-automated-update-checks">the automated update checks</a>.<br />
+For headless machines, <code>UniOS-Update</code> includes an extensive CLI.</p>
+<h3 id="the-systray-applet">The systray applet</h3>
+<p>To start the systray applet and enable it automatically at boot, run the following command (preferred method for most environments, uses <a href="https://wiki.archlinux.org/title/XDG_Autostart">XDG Autostart</a>):</p>
+<pre><code class="language-bash">unios-update --tray --enable
+</code></pre>
+<p>In case your graphical environment doesn't support XDG Autostart, add the following command your environment auto-start method instead:</p>
+<p><em>Note that the small startup delay in the form of the <code>sleep 3</code> command may not always be required but acts as a useful trick to avoid eventual <a href="https://en.wikipedia.org/wiki/Race_condition">race condition</a> issues which may lead to the systray applet unexpectedly not starting at boot. I therefore recommend its usage as a safety measure (this small delay is already applied by default with the XDG Autostart / <code>unios-update --tray --enable</code> method).</em></p>
+<pre><code class="language-bash">sleep 3 &amp;&amp; unios-update --tray
+</code></pre>
+<p>The systray icon dynamically changes to indicate the current state of your system ('up to date' or 'updates available'). When clicked, it launches <code>unios-update</code> in a terminal window via the <a href="https://github.com/Antiz96/arch-update/blob/main/res/desktop/arch-update.desktop">unios-update.desktop</a> file.<br />
+The systray applet menu shows further information (like the list of pending updates, time of the last and next checks, ...) and allows to trigger specific actions (like running UniOS-Update, check for updates, ...). See <a href="#screenshots">screenshots</a> for more details.</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>GNOME shell does not support systray icons natively, GNOME users need to install the <a href="https://extensions.gnome.org/extension/615/appindicator-support/">"AppIndicator and KStatusNotifierItem Support" extension</a> for the systray applet to work.</li>
+</ul>
+<h3 id="the-automated-update-checks">The automated update checks</h3>
+<p>To enable automated and periodic checks for available updates, run the following command:</p>
+<pre><code class="language-bash">unios-update --check --enable
+</code></pre>
+<p>By default, a check is performed <strong>at boot and then once every 6 hours</strong>. The check cycle can be customized, see <a href="#modify-the-check-cycle">this chapter</a>.</p>
+<h3 id="screenshots">Screenshots</h3>
+<p>Once started, the systray applet appears in the systray area of your panel.<br />
+It is the third icon on the left in the screenshot below:</p>
+<p><img alt="icon" src="/res/screenshots/tray-icon.png" /></p>
+<p>On hover if there are new available updates, the systray icon shows a notification indicating the number of available updates. You can click on it and run UniOS-Update:</p>
+<p><img alt="notif" src="/res/screenshots/updates-available.png" /></p>
+<p>When the systray icon is left-clicked, <code>unios-update</code> is run in a terminal window</p>
+<p><img alt="run" src="/res/screenshots/update-window.png" /></p>
+<p>From there, just let <code>UniOS-Update</code> guide you through the various steps required for a complete and proper update of your system! :smile:</p>
+<p>Certain options can be enabled, disabled or modified via the <code>unios-update.conf</code> configuration file. See the <a href="doc/man/unios-update.conf.5.scd">unios-update.conf(5) man page</a> for more details.</p>
+<h2 id="documentation">Documentation</h2>
+<h3 id="unios-update_1">unios-update</h3>
+<p>See <code>unios-update --help</code> and the <a href="doc/man/unios-update.1.scd">unios-update(1) man page</a>.</p>
+<h3 id="unios-update-configuration-file">unios-update configuration file</h3>
+<p>See the <a href="doc/man/unios-update.conf.5.scd">unios-update.conf(5) man page</a>.</p>
+<h2 id="tips-tricks-and-troubleshooting">Tips &amp; tricks and troubleshooting</h2>
+<h3 id="modify-the-check-cycle">Modify the check cycle</h3>
+<p>If you enabled <a href="#the-automated-update-checks">the automated update checks</a>, a check for available updates is automatically launched at boot and then once each 6 hours.</p>
+<p>If you want to customize the check cycle, run <code>systemctl --user edit --full unios-update.timer</code> and modify the <code>OnUnitActiveSec</code> value to your liking.<br />
+For instance, if you want <code>UninOS-Update</code> to check for new updates every 4 hours instead:</p>
+<pre><code class="language-text">[...]
+[Timer]
+OnStartupSec=15
+OnUnitActiveSec=4h
+[...]
+</code></pre>
+<p>Time units are <code>s</code> for seconds, <code>m</code> for minutes, <code>h</code> for hours, <code>d</code> for days...<br />
+See <a href="https://www.freedesktop.org/software/systemd/man/latest/systemd.time.html#Parsing%20Time%20Spans">https://www.freedesktop.org/software/systemd/man/latest/systemd.time.html#Parsing%20Time%20Spans</a> for more details.</p>
+<p>In case you want <code>UniOS-Update</code> to check for new updates only once at boot, you can simply delete the <code>OnUnitActiveSec</code> line completely.</p>
+<h2 id="contributing">Contributing</h2>
+<p>You can contribute <a href="https://github.com/open-source-uom/unios-update">here</a>. We recomend following the <a href="https://github.com/Antiz96/arch-update/blob/main/CONTRIBUTING.md">contributing guidelines</a> of Arch Linux.</p>
+<h2 id="license">License</h2>
+<p>UniOS-Update is licensed under the <a href="https://github.com/Antiz96/arch-update/blob/main/LICENSE">GPL-3.0 license</a> (or any later version of that license).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

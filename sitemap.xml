@@ -32,4 +32,12 @@
          <loc>https://docs.unios-project.eu/uninews/</loc>
          <lastmod>2026-10-25</lastmod>
     </url>
+    <url>
+         <loc>https://docs.unios-project.eu/unios-desktop-settings/</loc>
+         <lastmod>2026-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.unios-project.eu/unios-update/</loc>
+         <lastmod>2026-10-25</lastmod>
+    </url>
 </urlset>
