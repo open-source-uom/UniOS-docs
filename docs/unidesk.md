@@ -4,11 +4,19 @@
 
 # UniDesk
 
-UniDesk is the welcome application that ships with UniOS, a custom Linux distribution built for students and staff for all greek universities. It gives users a friendly starting point when they boot into the system, with quick access to information about the project, useful links, and the people behind it.
+UniDesk is the welcome application that ships with UniOS, a custom Linux distribution built for students and staff for all Greek universities. It gives users a friendly starting point when they boot into the system, with quick access to information about the project, useful links, and the people behind it.
 
 ## What it does
 
 When you open UniDesk you land on a simple screen with a two column layout. On the left you have introductory pages like Features, Links, and FAQ. On the right you have community oriented pages like Source Code, Contribute, and Credits. Clicking any button takes you to a dedicated page, and a back button always brings you home.
+
+## Installing on UniOS
+
+UniDesk is available in `unios-repo` as the `unidesk` package:
+
+```bash
+sudo pacman -S unidesk
+```
 
 ## Requirements
 

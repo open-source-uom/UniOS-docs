@@ -11,14 +11,14 @@ For the app side of our project (see what I did there? upside haha), you tend to
 #### Description 
 - what is the purpose of the project ?
 #### Installation guide 
-- How to install it as a user? (generally we reccoment using `unios-repo` but you should talk about install from source here)
+- How to install it as a user? (generally we recommend using `unios-repo` but you should talk about install from source here)
 - How to install it as a developer (Yes we are technical people but give us a break too)
 #### Project Structure 
-- Add a `tree` command output to explain the folders and the files of you project 
+- Add a `tree` command output to explain the folders and the files of your project 
 - Tell us about `sql` databases and their schema if needed 
 - Always add samples of files if the app is generating something. 
 #### Add your name and feel proud / roadmap 
-- We are almost done, now you can add your name here as a contributor and an emaila address you probably ignore 
+- We are almost done, now you can add your name here as a contributor and an email address you probably ignore 
 - Add a roadmap (maybe?) if you are quite sure about the next updates that you want help on, please add a roadmap
 #### Document your changes
 - It is usual for a person to refactor the project, please **UPDATE** the documentation so we can know what happened 
