@@ -1,0 +1,1170 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.unios-project.eu/install-guide/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../generalworkflow/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Installing UniOS - UniOS Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#installing-unios" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="UniOS Docs" class="md-header__button md-logo" aria-label="UniOS Docs" data-md-component="logo">
+      
+  <img src="../img/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UniOS Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Installing UniOS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="purple" data-md-color-accent="purple"  aria-label="Switch to system preference`"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference`" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="UniOS Docs" class="md-nav__button md-logo" aria-label="UniOS Docs" data-md-component="logo">
+      
+  <img src="../img/favicon.ico" alt="logo">
+
+    </a>
+    UniOS Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installing UniOS
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installing UniOS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before you start
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Before you start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#remember-installing-an-operating-system-can-erase-your-disk-back-up-anything-important-documents-photos-university-projects-to-an-external-drive-or-the-cloud-before-you-continue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        REMEMBER: Installing an operating system can erase your disk. Back up anything important (documents, photos, university projects) to an external drive or the cloud before you continue.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-download-the-iso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Download the ISO
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-make-a-bootable-usb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Make a bootable USB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Make a bootable USB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventoy-recommended-windows-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventoy (recommended, Windows &amp; Linux)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rufus-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rufus (Windows)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balenaetcher-windows-macos-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        balenaEtcher (Windows, macOS &amp; Linux)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dd-linux-for-the-terminal-enjoyers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dd (Linux, for the terminal enjoyers)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-boot-from-the-usb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Boot from the USB
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-try-it-out-live-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Try it out (Live session)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-install-unios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Install UniOS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Install UniOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dual-booting-with-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dual booting with Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-first-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. First boot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#want-to-try-it-in-a-virtual-machine-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Want to try it in a virtual machine first?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#something-went-wrong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Something went wrong?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generalworkflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General Dev Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../addingdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding docs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build.unios-project.eu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Our build server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unibackpack/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UniBackpack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unidesk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UniDesk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uninews/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UniNews
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UniOS-landing-page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UniOS-landind-page
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unios-desktop-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    unios-desktop-settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unios-update/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    unios-update
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unios-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    unios-repo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before you start
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Before you start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#remember-installing-an-operating-system-can-erase-your-disk-back-up-anything-important-documents-photos-university-projects-to-an-external-drive-or-the-cloud-before-you-continue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        REMEMBER: Installing an operating system can erase your disk. Back up anything important (documents, photos, university projects) to an external drive or the cloud before you continue.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-download-the-iso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Download the ISO
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-make-a-bootable-usb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Make a bootable USB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Make a bootable USB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventoy-recommended-windows-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventoy (recommended, Windows &amp; Linux)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rufus-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rufus (Windows)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balenaetcher-windows-macos-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        balenaEtcher (Windows, macOS &amp; Linux)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dd-linux-for-the-terminal-enjoyers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dd (Linux, for the terminal enjoyers)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-boot-from-the-usb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Boot from the USB
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-try-it-out-live-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Try it out (Live session)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-install-unios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Install UniOS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Install UniOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dual-booting-with-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dual booting with Windows
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-first-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. First boot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#want-to-try-it-in-a-virtual-machine-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Want to try it in a virtual machine first?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#something-went-wrong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Something went wrong?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p align="center">
+  <img src="../img/favicon.ico" alt="UniOS logo" width="200">
+</p>
+
+<h1 id="installing-unios">Installing UniOS</h1>
+<p>This guide walks you through downloading UniOS, putting it on a USB stick and installing it on your computer. No Linux experience needed, if you can install a game you can install UniOS.</p>
+<h2 id="before-you-start">Before you start</h2>
+<p>Make sure your computer meets the minimum requirements:</p>
+<ul>
+<li>A 64-bit (x86-64) computer, Apple Silicon Macs and ARM laptops are <strong>not</strong> supported</li>
+<li>At least 2 CPU cores</li>
+<li>At least 4GB of RAM</li>
+<li>At least 25GB of free storage</li>
+<li>A USB stick of 8GB or more (<strong>everything on it will be erased</strong>, unless you use Ventoy, see below)</li>
+<li>An internet connection is recommended during the installation</li>
+</ul>
+<h3 id="remember-installing-an-operating-system-can-erase-your-disk-back-up-anything-important-documents-photos-university-projects-to-an-external-drive-or-the-cloud-before-you-continue"><strong>REMEMBER</strong>: Installing an operating system can erase your disk. Back up anything important (documents, photos, university projects) to an external drive or the cloud before you continue.</h3>
+<h2 id="1-download-the-iso">1. Download the ISO</h2>
+<p>Head to our download server and grab the newest <code>.iso</code> file (the name contains the release date, e.g. <code>UniOS-2026.09.24-x86_64.iso</code>):</p>
+<p><a href="https://download.unios-project.eu/" target="_blank">download.unios-project.eu</a></p>
+<p>You can also use the download button on our <a href="https://unios-project.eu" target="_blank">webpage</a>. The file is about 4GB, so give it a few minutes. We publish a new ISO every month (see <a href="../generalworkflow/">General Dev Workflow</a>), but an older ISO is fine too, the system updates itself after the installation.</p>
+<h2 id="2-make-a-bootable-usb">2. Make a bootable USB</h2>
+<p>Pick <strong>one</strong> of the following tools.</p>
+<h3 id="ventoy-recommended-windows-linux">Ventoy (recommended, Windows &amp; Linux)</h3>
+<p><a href="https://www.ventoy.net" target="_blank">Ventoy</a> lets you keep many ISOs on one stick, and you just copy the <code>.iso</code> file onto it like any other file.</p>
+<ol>
+<li>Download Ventoy and run <code>Ventoy2Disk.exe</code> (Windows) or <code>VentoyGUI</code> (Linux)</li>
+<li>Select your USB stick and click <strong>Install</strong>. If the stick already has files you want to keep and is formatted as NTFS, use <strong>Option → Non-destructive Install</strong> instead</li>
+<li>Copy <code>UniOS-....iso</code> onto the stick</li>
+</ol>
+<h3 id="rufus-windows">Rufus (Windows)</h3>
+<ol>
+<li>Download <a href="https://rufus.ie" target="_blank">Rufus</a> and open it</li>
+<li>Select your USB stick under <strong>Device</strong> and the UniOS ISO under <strong>Boot selection</strong></li>
+<li>Click <strong>Start</strong>, if Rufus asks, choose <strong>Write in DD Image mode</strong></li>
+</ol>
+<h3 id="balenaetcher-windows-macos-linux">balenaEtcher (Windows, macOS &amp; Linux)</h3>
+<ol>
+<li>Download <a href="https://etcher.balena.io" target="_blank">balenaEtcher</a> and open it</li>
+<li><strong>Flash from file</strong> → pick the ISO, <strong>Select target</strong> → pick the USB stick, then <strong>Flash!</strong></li>
+</ol>
+<h3 id="dd-linux-for-the-terminal-enjoyers">dd (Linux, for the terminal enjoyers)</h3>
+<p>Find your stick with <code>lsblk</code> and double check the name, <code>dd</code> will happily overwrite your main disk if you tell it to:</p>
+<pre><code class="language-sh">sudo dd if=UniOS-2026.09.24-x86_64.iso of=/dev/sdX bs=4M status=progress oflag=sync
+</code></pre>
+<h2 id="3-boot-from-the-usb">3. Boot from the USB</h2>
+<ol>
+<li>Plug in the stick and restart the computer</li>
+<li>Open the boot menu by pressing the right key as soon as the computer turns on, it is usually one of <code>F12</code>, <code>F11</code>, <code>F10</code>, <code>F8</code>, <code>Esc</code> or <code>F2</code> depending on the manufacturer (Dell/Lenovo: <code>F12</code>, HP: <code>F9</code> or <code>Esc</code>, ASUS: <code>F8</code> or <code>Esc</code>, Acer: <code>F12</code>)</li>
+<li>Select your USB stick (if you see it twice, prefer the one that says <strong>UEFI</strong>)</li>
+<li>If you used Ventoy, pick the UniOS ISO from the Ventoy menu and choose <strong>Boot in normal mode</strong></li>
+</ol>
+<p>If the computer refuses to boot the stick or shows a "Secure Boot violation" message, go into the BIOS/UEFI settings (usually <code>F2</code> or <code>Del</code> at startup) and <strong>disable Secure Boot</strong>, then try again.</p>
+<h2 id="4-try-it-out-live-session">4. Try it out (Live session)</h2>
+<p>UniOS will start in a live session straight from the USB, you will be logged in automatically and nothing has been changed on your computer yet. Feel free to look around, check that Wi-Fi, sound and your screen work properly before installing.</p>
+<h2 id="5-install-unios">5. Install UniOS</h2>
+<p>Start the installer by double clicking <strong>Install UniOS</strong> on the desktop (it may also open by itself when the live session starts). The installer will guide you through the following:</p>
+<ol>
+<li><strong>Language</strong>: choose the language of the system</li>
+<li><strong>Location</strong>: choose your region and time zone (e.g. <code>Europe/Athens</code>)</li>
+<li><strong>Keyboard</strong>: choose your keyboard layout, you can test it in the text box</li>
+<li><strong>Partitions</strong>: choose where UniOS will be installed<ul>
+<li><strong>Erase disk</strong>: UniOS takes over the whole disk, the simplest option, <strong>everything on that disk is deleted</strong></li>
+<li><strong>Install alongside</strong>: keeps your current system (e.g. Windows) and lets you choose between them on every boot</li>
+<li><strong>Manual partitioning</strong>: for people who know what they are doing</li>
+</ul>
+</li>
+<li><strong>Users</strong>: your name, username, computer name and password. Don't forget your password, you will need it to install apps and updates</li>
+<li><strong>Summary</strong>: check everything one last time and click <strong>Install</strong></li>
+</ol>
+<p>The installation takes 10 to 30 minutes depending on your computer. When it finishes, check <strong>Restart now</strong>, click <strong>Done</strong> and <strong>unplug the USB stick</strong> when the screen goes black.</p>
+<h3 id="dual-booting-with-windows">Dual booting with Windows</h3>
+<p>If you chose <strong>Install alongside</strong>, do the following in Windows <strong>before</strong> installing:</p>
+<ul>
+<li>Disable <strong>Fast Startup</strong> (Control Panel → Power Options → Choose what the power buttons do)</li>
+<li>If BitLocker is enabled, write down your recovery key or suspend BitLocker, Windows may ask for it after the installation</li>
+<li>Make sure you have enough free space on the disk (at least 25GB) for UniOS</li>
+</ul>
+<h2 id="6-first-boot">6. First boot</h2>
+<p>After the restart, log in with the user you created. <strong>UniDesk</strong> will greet you and help you set up the system for your university and department. From there on:</p>
+<ul>
+<li>Install the software your courses need with <a href="../unibackpack/">UniBackpack</a></li>
+<li>Keep up with the news of your university using <a href="../uninews/">UniNews</a></li>
+<li>Keep your system up to date with <a href="../unios-update/">unios-update</a>, it will notify you from the system tray when updates are available</li>
+</ul>
+<h2 id="want-to-try-it-in-a-virtual-machine-first">Want to try it in a virtual machine first?</h2>
+<p>You can test UniOS without touching your computer using <a href="https://www.virtualbox.org" target="_blank">VirtualBox</a>:</p>
+<ol>
+<li>Create a new VM, type <strong>Linux</strong>, version <strong>Arch Linux (64-bit)</strong></li>
+<li>Give it at least 4GB of RAM, 2 CPUs and a 25GB disk</li>
+<li>In <strong>Settings → System</strong>, tick <strong>Enable EFI</strong></li>
+<li>In <strong>Settings → Storage</strong>, attach the UniOS ISO to the optical drive and start the VM</li>
+<li>After the installation, remove the ISO from the optical drive before rebooting</li>
+</ol>
+<h2 id="something-went-wrong">Something went wrong?</h2>
+<p>Don't panic, come and talk to us! You can find us on Discord, open an issue on <a href="https://github.com/open-source-uom/unios-iso/issues" target="_blank">GitHub</a> or visit us in office B-102 of the University of Macedonia every Sunday. See <a href="../generalworkflow/">General Dev Workflow</a> for all the ways to reach us.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
