@@ -14,6 +14,14 @@ UniNews addresses this problem by collecting content from multiple sources and p
 
 The application is developed in Python using PyQt6 and follows a modular architecture that supports both RSS feeds and custom website scrapers.
 
+### Installing on UniOS
+
+UniNews is available in `unios-repo` as the `uninews` package:
+
+```bash
+sudo pacman -S uninews
+```
+
 ---
 
 ## 2. Objectives

@@ -40,4 +40,4 @@ theme:
         accent: purple
         toggle:
           icon: material/brightness-4
-          name: Switch to system preference`
+          name: Switch to system preference
