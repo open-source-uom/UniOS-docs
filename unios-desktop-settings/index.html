@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -29,10 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -465,7 +465,7 @@
   <span class="md-ellipsis">
     
   
-    UniOS-landind-page
+    UniOS-landing-page
   
 
     
@@ -920,16 +920,16 @@
 </p>
 
 <h1 id="unios-desktop-settings">unios-desktop-settings</h1>
-<p>unios-desktop-settings is the package that gives UniOS its look on KDE Plasma. It ships the UniOS wallpapers and logo, sets Breeze Dark as the default theme, replaces the Plasma Welcome Center with our own first login setup, and puts the UniOS logo on the application launcher.</p>
-<p>It has no code of its own to build; everything it installs is described in the <code>PKGBUILD</code>.</p>
+<p>unios-desktop-settings is the package that gives UniOS its look on KDE Plasma. It ships the UniOS wallpapers and logo, sets Breeze Dark as the default theme and Firefox as the default browser, replaces the Plasma Welcome Center with our own first login setup, and puts the UniOS logo on the application launcher.</p>
+<p>It has no code of its own to build. The config files are kept in <code>files/</code>, at the same paths they're installed to, and the <code>PKGBUILD</code> copies them into place along with the wallpapers and the logo.</p>
 <h2 id="how-it-works">How it works</h2>
 <ol>
-<li>On install, the wallpapers go to <code>/usr/share/wallpapers/UniOS</code>, so they show up in Plasma's wallpaper picker as <strong>UniOS Wallpapers</strong>, and the logo replaces the KDE start-here and distributor icons.</li>
-<li>System-wide defaults in <code>/etc/xdg</code> make Breeze Dark the look and feel, color scheme, icon theme and Plasma theme.</li>
-<li>The Plasma Welcome Center is turned off, both through its autostart entry and through the defaults in <code>/etc/skel</code> that every new user gets.</li>
-<li>On every login, the <code>unios-plasma-setup.sh</code> autostart script waits for Plasma to start, sets <code>default.jpg</code> as the wallpaper of every desktop, and sets the UniOS logo as the icon of the application launcher on every panel.</li>
+<li>On install, every wallpaper goes to its own folder in <code>/usr/share/wallpapers/</code>, so they show up in Plasma's wallpaper picker as <strong>UniOS</strong>, <strong>UniOS Patterns</strong> and <strong>UniOS Dense Patterns</strong>, and the logo is installed as the <code>unios</code> and <code>distributor-logo</code> icons.</li>
+<li>System-wide defaults in <code>/etc/xdg</code> make Breeze Dark the look and feel, color scheme, icon theme and Plasma theme, and Firefox the default browser.</li>
+<li>The Plasma Welcome Center is turned off by disabling the kded module that launches it. In case it gets loaded anyway, <code>plasma-welcomerc</code> tells it this isn't a first run and not to show the update page.</li>
+<li>On a user's first login, the <code>unios-plasma-setup.sh</code> autostart script waits for Plasma to start, sets the <strong>UniOS</strong> wallpaper on every desktop, and sets the UniOS logo as the icon of the application launcher on every panel. It doesn't run again after that, so users can change both.</li>
 </ol>
-<p>Since the files in <code>/etc/skel</code> are only copied when a user is created, existing users keep their Welcome Center settings. The theme defaults in <code>/etc/xdg</code> apply to anyone who hasn't changed them in their own <code>~/.config</code>.</p>
+<p>Everything in steps 2 and 3 is a system-wide default, so it applies to the live session and to every user, new or existing, unless they've changed that setting in their own <code>~/.config</code>. Those config files are in the <code>backup</code> array as well: if you edit one on a machine, upgrades leave your copy alone and put the new one next to it as <code>.pacnew</code>.</p>
 <h2 id="installation">Installation</h2>
 <h3 id="as-a-user">As a user</h3>
 <p><strong>On UniOS</strong>, unios-desktop-settings is preinstalled. If you removed it, install it again from <code>unios-repo</code>:</p>
@@ -945,23 +945,38 @@ makepkg -si
 <p>You only need <code>base-devel</code> and a KDE Plasma session to test the result:</p>
 <pre><code class="language-bash">sudo pacman -S base-devel
 </code></pre>
-<p>Build the package without installing it, and check what it would install:</p>
+<p>The <code>PKGBUILD</code> builds from the checkout, so run <code>makepkg</code> from the root of the repository. Build the package without installing it, and check what it would install:</p>
 <pre><code class="language-bash">makepkg -f
 tar -tf unios-desktop-settings-*.pkg.tar.zst
 </code></pre>
-<p>When you're happy with it, install it with <code>makepkg -si</code> and log in again. To build it for <code>unios-repo</code>, follow the <code>pkgbuilder</code> process in <a href="../build.unios-project.eu/">our build server</a> docs.</p>
+<p>When you're happy with it, install it with <code>makepkg -si</code> and log in again. The setup script only runs once per user, so if you already logged in with it installed, delete <code>~/.local/state/unios/plasma-setup.done</code> first.</p>
+<p>Every push and pull request to <code>main</code> also gets built in an Arch container on GitHub Actions. It runs <code>shellcheck</code> on the setup script, <code>desktop-file-validate</code> on the autostart entry and <code>jq</code> on the wallpapers' <code>metadata.json</code>, then builds the package with <code>makepkg</code>. <code>namcap</code> runs last but only reports: it flags dependencies it can't see being used, like <code>qt6-tools</code> for <code>qdbus6</code>.</p>
+<p>To build it for <code>unios-repo</code>, bump <code>pkgrel</code> and follow the <code>pkgbuilder</code> process in <a href="../build.unios-project.eu/">our build server</a> docs.</p>
 <h2 id="project-structure">Project Structure</h2>
 <pre><code>unios-desktop-settings/
-├── PKGBUILD                  package recipe; also generates every config file below
+├── PKGBUILD                  package recipe
+├── files/                    installed at the same path on the system
+│   ├── etc/xdg/
+│   │   ├── autostart/
+│   │   │   └── unios-plasma-setup.desktop
+│   │   ├── kded5rc
+│   │   ├── kdeglobals
+│   │   ├── mimeapps.list
+│   │   ├── plasma-welcomerc
+│   │   └── plasmarc
+│   └── usr/lib/unios/
+│       └── unios-plasma-setup.sh
 ├── resources/
 │   ├── logos/
 │   │   └── unios.png         the UniOS logo
-│   └── wallpapers/
-│       ├── default.jpg       the wallpaper set on login
-│       ├── dense_repeating_patterns.jpg
-│       └── repeating_patterns.jpg
+│   └── wallpapers/           one KDE wallpaper package per folder
+│       ├── UniOS/            the wallpaper set on first login
+│       │   ├── metadata.json
+│       │   └── contents/images/3840x2160.jpg
+│       ├── UniOS-Dense-Patterns/
+│       └── UniOS-Patterns/
 └── .github/workflows/
-    └── publish_to_PPA.yml    leftover from the Debian packaging
+    └── build.yml             lints and builds the package
 </code></pre>
 <h3 id="files-the-package-installs">Files the package installs</h3>
 <table>
@@ -973,48 +988,52 @@ tar -tf unios-desktop-settings-*.pkg.tar.zst
 </thead>
 <tbody>
 <tr>
-<td><code>/usr/share/wallpapers/UniOS/contents/images/</code></td>
-<td>every image in <code>resources/</code>, except the logo</td>
+<td><code>/usr/share/wallpapers/UniOS/</code></td>
+<td>the <strong>UniOS</strong> wallpaper, set on first login</td>
 </tr>
 <tr>
-<td><code>/usr/share/wallpapers/UniOS/metadata.json</code></td>
-<td>names the wallpaper pack <strong>UniOS Wallpapers</strong></td>
+<td><code>/usr/share/wallpapers/UniOS-Patterns/</code></td>
+<td>the <strong>UniOS Patterns</strong> wallpaper</td>
+</tr>
+<tr>
+<td><code>/usr/share/wallpapers/UniOS-Dense-Patterns/</code></td>
+<td>the <strong>UniOS Dense Patterns</strong> wallpaper</td>
 </tr>
 <tr>
 <td><code>/usr/share/pixmaps/unios.png</code></td>
 <td>the UniOS logo</td>
 </tr>
 <tr>
-<td><code>/usr/share/icons/hicolor/.../apps/</code></td>
-<td>the logo as <code>unios</code>, <code>start-here-kde</code> and <code>distributor-logo</code></td>
+<td><code>/usr/share/icons/hicolor/256x256/apps/</code></td>
+<td>the logo as <code>unios</code> and <code>distributor-logo</code></td>
 </tr>
 <tr>
 <td><code>/etc/xdg/kdeglobals</code></td>
-<td>Breeze Dark look and feel, color scheme and icons</td>
+<td>Breeze Dark look and feel, color scheme and icons, Firefox as the browser</td>
 </tr>
 <tr>
 <td><code>/etc/xdg/plasmarc</code></td>
 <td>Breeze Dark Plasma theme</td>
 </tr>
 <tr>
-<td><code>/etc/skel/.config/plasma-welcome-appletsrc</code></td>
-<td>hides the Welcome Center for new users</td>
+<td><code>/etc/xdg/mimeapps.list</code></td>
+<td>Firefox as the default for web links</td>
 </tr>
 <tr>
-<td><code>/etc/skel/.config/kded_plasma_welcomerc</code></td>
-<td>stops the Welcome Center daemon module for new users</td>
+<td><code>/etc/xdg/kded5rc</code></td>
+<td>stops the Welcome Center's kded module from loading</td>
+</tr>
+<tr>
+<td><code>/etc/xdg/plasma-welcomerc</code></td>
+<td>tells the Welcome Center there's nothing to show, in case it starts anyway</td>
 </tr>
 <tr>
 <td><code>/usr/lib/unios/unios-plasma-setup.sh</code></td>
-<td>the login setup script</td>
+<td>the first login setup script</td>
 </tr>
 <tr>
 <td><code>/etc/xdg/autostart/unios-plasma-setup.desktop</code></td>
-<td>runs the setup script on login</td>
-</tr>
-<tr>
-<td><code>/etc/xdg/autostart/org.kde.plasma-welcome.desktop</code></td>
-<td>hides the Welcome Center autostart entry</td>
+<td>runs the setup script when a user logs in to Plasma</td>
 </tr>
 </tbody>
 </table>
@@ -1024,6 +1043,7 @@ LookAndFeelPackage=org.kde.breezedark.desktop
 
 [General]
 ColorScheme=BreezeDark
+BrowserApplication=firefox.desktop
 
 [Icons]
 Theme=breeze-dark
@@ -1031,24 +1051,37 @@ Theme=breeze-dark
 <h3 id="the-setup-script">The setup script</h3>
 <p><code>unios-plasma-setup.sh</code> uses <code>qdbus6</code> (or <code>qdbus</code>, if that's what's available) to talk to <code>plasmashell</code>. It tries for up to 15 seconds until Plasma answers, then runs a Plasma script that:</p>
 <ul>
-<li>sets <code>/usr/share/wallpapers/UniOS/contents/images/default.jpg</code> on every desktop</li>
-<li>finds every Kickoff, Kicker or app menu widget on every panel and sets <code>/usr/share/pixmaps/unios.png</code> as its icon</li>
+<li>sets the <strong>UniOS</strong> wallpaper package, <code>/usr/share/wallpapers/UniOS/</code>, on every desktop</li>
+<li>finds every Kickoff or Kicker widget on every panel and sets <code>/usr/share/pixmaps/unios.png</code> as its icon</li>
 </ul>
-<p>Finally it applies the wallpaper once more with <code>plasma-apply-wallpaperimage</code>. It runs in autostart phase 2, after the desktop and panels have loaded, and it doesn't write anything outside of Plasma's own config.</p>
+<p>Once Plasma has run it, the script leaves <code>~/.local/state/unios/plasma-setup.done</code> behind. On every login after that it finds the file and exits right away, so the wallpaper and launcher icon a user picks stay. If Plasma never answered, nothing is written and it tries again on the next login. Delete that file to run it again.</p>
+<p>It only runs in Plasma sessions, in autostart phase 2, after the desktop and panels have loaded, and it doesn't write anything outside of Plasma's own config and that file.</p>
 <h2 id="adding-a-wallpaper">Adding a Wallpaper</h2>
+<p>Every folder in <code>resources/wallpapers/</code> is a KDE wallpaper package of its own, installed to <code>/usr/share/wallpapers/</code> under the same name.</p>
 <ol>
-<li>Put the image in <code>resources/wallpapers/</code>. <code>.jpg</code>, <code>.jpeg</code>, <code>.png</code> and <code>.webp</code> files are picked up.</li>
-<li>Don't put <code>logo</code> in its name; those files are treated as the logo and left out of the wallpapers.</li>
-<li>To change the wallpaper that is set on login, replace <code>default.jpg</code>, since that name is hardcoded in the setup script.</li>
+<li>Make a new folder in <code>resources/wallpapers/</code>.</li>
+<li>Copy <code>metadata.json</code> from one of the others, then set <code>Id</code> to the folder name and <code>Name</code> to what the wallpaper picker should show.</li>
+<li>Put the image in <code>contents/images/</code> inside it, named after its resolution, e.g. <code>3840x2160.jpg</code>. Plasma picks the image by that name and skips files named anything else.</li>
 <li>Bump <code>pkgrel</code> in the <code>PKGBUILD</code> (or <code>pkgver</code>, and reset <code>pkgrel</code> to <code>1</code>) so users get the update.</li>
 </ol>
+<p>To change the wallpaper that is set on first login, replace the image in <code>resources/wallpapers/UniOS/contents/images/</code>, since the setup script points at the <code>UniOS</code> package.</p>
 <h2 id="changing-the-logo">Changing the Logo</h2>
-<p>Replace <code>resources/logos/unios.png</code>. The first file named <code>unios.png</code>, or with <code>logo</code> in its name, is used, so keep a single one in <code>resources/</code>.</p>
+<p>Replace <code>resources/logos/unios.png</code>. It's installed as <code>/usr/share/pixmaps/unios.png</code>, which the setup script puts on the launcher, and as the <code>unios</code> and <code>distributor-logo</code> icons.</p>
 <h2 id="recent-changes">Recent Changes</h2>
 <ul>
-<li>UniOS moved to Arch, so the Debian packaging and the Launchpad PPA were dropped in favour of a <code>PKGBUILD</code>. The <code>publish_to_PPA.yml</code> workflow is still in the repository, but it can no longer build anything without the <code>debian/</code> folder.</li>
-<li>Wallpapers and the logo moved to <code>resources/wallpapers/</code> and <code>resources/logos/</code>, and new wallpapers were added.</li>
-<li>The Plasma Welcome Center is now hidden through its autostart entry and the <code>/etc/skel</code> defaults.</li>
+<li>The packaging was refactored in <a href="https://github.com/open-source-uom/unios-desktop-settings/pull/13">#13</a>:<ul>
+<li>The config files and the setup script moved out of the <code>PKGBUILD</code> into <code>files/</code>, and the <code>PKGBUILD</code> builds straight from the checkout.</li>
+<li>Every wallpaper is its own KDE wallpaper package now, with the image named after its resolution, which is how Plasma finds it. Before, they were all in one package with no image Plasma could use, so the patterns could never be picked. They were also scaled down from 8001x4501 to 3840x2160, with the same colours.</li>
+<li>The setup script runs once per user instead of on every login, so users can change the wallpaper and the launcher icon and keep them. It also only runs on Plasma now.</li>
+<li>The logo is no longer installed as a wallpaper or as the <code>start-here-kde</code> icon, since Breeze Dark has its own.</li>
+<li><code>qt6-tools</code> (for <code>qdbus6</code>) and <code>hicolor-icon-theme</code> were added to the dependencies, and <code>firefox</code> to the optional ones.</li>
+<li>The <code>/etc/xdg</code> config files are in the <code>backup</code> array, so local edits survive upgrades.</li>
+<li><code>publish_to_PPA.yml</code>, which couldn't build anything without <code>debian/</code>, was replaced by a CI build on Arch.</li>
+</ul>
+</li>
+<li>Firefox is the default browser.</li>
+<li>The Plasma Welcome Center is turned off through its kded module instead of <code>/etc/skel</code>, so it's also off in the live session and for existing users.</li>
+<li>UniOS moved to Arch, so the Debian packaging and the Launchpad PPA were dropped in favour of a <code>PKGBUILD</code>, and the wallpapers and the logo moved to <code>resources/</code>.</li>
 </ul>
 <h2 id="contributors">Contributors</h2>
 <p>Maintained by <a href="https://github.com/open-source-uom">Open Source UoM</a>, with contributions from:</p>
@@ -1105,10 +1138,10 @@ Theme=breeze-dark
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
       
     
   </body>
