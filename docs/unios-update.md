@@ -3,17 +3,6 @@
 </p>
 # UniOS-Update
 
-## Table of contents
-
-- [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Documentation](#documentation)
-- [Tips & tricks and troubleshooting](#tips--tricks-and-troubleshooting)
-- [Reproduce the pre-compiled tray binary from source](#reproduce-the-pre-compiled-tray-binary-from-source)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Description
 
 An interactive update notifier & applier for UniOS that assists you with important pre / post update tasks. 
